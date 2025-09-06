@@ -1,0 +1,2 @@
+[INFO] Scanning: $NEWFILE
+action_setup: Failed to get realpath of $INFECTED_DIR
