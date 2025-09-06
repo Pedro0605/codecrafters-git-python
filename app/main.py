@@ -19,7 +19,7 @@ def main():
         file = sys.argv[3]
         obj_path = f".git/objects/{file[:2]}/{file[2:]}"
         with open(obj_path, "rb") as obj:
-            content = obj.read
+            content = obj.read()
             content = zlib.decompress(content)
             content_start = content.find(b"x00")
             content = content[content_start + 1:].strip()
