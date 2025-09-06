@@ -17,7 +17,7 @@ def main():
         print("Initialized git directory")
     elif command == "cat-file" and sys.argv[2] == "-p":
         file = sys.argv[3]
-        obj_path = f".git/objects/{file[:2]/file[2:]}"
+        obj_path = f".git/objects/{file[:2]}/{file[2:]}"
         with open(obj_path, "rb") as obj:
             content = obj.read
             content = zlib.decompress(content)
