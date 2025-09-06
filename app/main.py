@@ -21,7 +21,7 @@ def main():
         with open(obj_path, "rb") as obj:
             content = obj.read()
             content = zlib.decompress(content)
-            content_start = content.find(b"x00")
+            content_start = content.find(b"\x00")
             content = content[content_start + 1:].strip()
             print(content.decode("utf-8"), end="")
     else:
