@@ -28,7 +28,7 @@ def main():
     
     elif command == "hash-object" and sys.argv[2] == "-w":
         file = sys.argv[3]
-        with open(file, "r") as f:
+        with open(file, "rb") as f:
             content = f.read()
         
         header = f"blob {len(content)}\0".encode("utf-8")
